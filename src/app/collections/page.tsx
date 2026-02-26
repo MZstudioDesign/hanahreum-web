@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { products, collections } from "@/data/collections";
 import FullBleedSection from "@/components/ui/FullBleedSection";
+import { assetPath } from "@/lib/paths";
 
 export default function CollectionsPage() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
@@ -20,7 +21,7 @@ export default function CollectionsPage() {
       <section className="relative min-h-[80vh] bg-[var(--color-bg-primary)] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/products/listing-1.png"
+            src={assetPath("/images/products/listing-1.png")}
             alt="Hanahreum rug collection"
             className="w-full h-full object-cover opacity-30"
           />
@@ -192,7 +193,7 @@ export default function CollectionsPage() {
 
       {/* Bottom CTA */}
       <FullBleedSection
-        bgImage="/images/brand/a-style.png"
+        bgImage={assetPath("/images/brand/a-style.png")}
         overlay="heavy"
         minHeight="50vh"
       >

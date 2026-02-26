@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 const selections = [
   {
@@ -22,7 +23,7 @@ const selections = [
   {
     name: "Deep Monochrome",
     description: "Single-hue mastery. Absolute depth.",
-    image: "/images/brand/over-decor.png",
+    image: assetPath("/images/brand/over-decor.png"),
   },
 ];
 

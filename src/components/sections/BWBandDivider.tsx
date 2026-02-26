@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { assetPath } from "@/lib/paths";
 
 export default function BWBandDivider() {
   return (
@@ -10,7 +11,7 @@ export default function BWBandDivider() {
       {/* Top: B&W image section */}
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <img
-          src="/images/brand/soft-calm.png"
+          src={assetPath("/images/brand/soft-calm.png")}
           alt="Hanahreum textile detail"
           className="w-full h-full object-cover grayscale"
         />

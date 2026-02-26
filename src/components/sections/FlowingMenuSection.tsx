@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { assetPath } from "@/lib/paths";
 
 interface FlowingMenuItem {
   link: string;
@@ -13,27 +14,27 @@ const menuItems: FlowingMenuItem[] = [
   {
     link: "/collections/",
     text: "Collections",
-    image: "/images/brand/the-home.png",
+    image: assetPath("/images/brand/the-home.png"),
   },
   {
     link: "/craftsmanship/",
     text: "Craftsmanship",
-    image: "/images/brand/organic.png",
+    image: assetPath("/images/brand/organic.png"),
   },
   {
     link: "/about/",
     text: "About Us",
-    image: "/images/brand/modern.png",
+    image: assetPath("/images/brand/modern.png"),
   },
   {
     link: "/journal/",
     text: "Journal",
-    image: "/images/brand/soft-calm.png",
+    image: assetPath("/images/brand/soft-calm.png"),
   },
   {
     link: "/#contact",
     text: "Partner With Us",
-    image: "/images/brand/cozy-warm.png",
+    image: assetPath("/images/brand/cozy-warm.png"),
   },
 ];
 

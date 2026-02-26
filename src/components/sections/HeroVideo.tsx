@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 export default function HeroVideo() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -34,7 +35,7 @@ export default function HeroVideo() {
           className="w-full h-full object-cover"
           onCanPlay={() => setLoaded(true)}
         >
-          <source src="/video/hero.mp4" type="video/mp4" />
+          <source src={assetPath("/video/hero.mp4")} type="video/mp4" />
         </video>
       </motion.div>
 

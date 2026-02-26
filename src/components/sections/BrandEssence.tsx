@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 export default function BrandEssence() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -24,7 +25,7 @@ export default function BrandEssence() {
           <div className="lg:col-span-7 overflow-hidden">
             <motion.div style={{ y: imgY }} className="relative aspect-[4/5]">
               <img
-                src="/images/brand/the-home.png"
+                src={assetPath("/images/brand/the-home.png")}
                 alt="The Home — Hanahreum editorial"
                 className="w-full h-full object-cover"
               />
@@ -61,14 +62,14 @@ export default function BrandEssence() {
             <div className="grid grid-cols-2 gap-4">
               <div className="reveal stagger-1 aspect-[3/4] overflow-hidden translate-y-8">
                 <img
-                  src="/images/brand/neutrality.png"
+                  src={assetPath("/images/brand/neutrality.png")}
                   alt="Neutrality"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
               </div>
               <div className="reveal stagger-2 aspect-[3/4] overflow-hidden -translate-y-4">
                 <img
-                  src="/images/brand/organic.png"
+                  src={assetPath("/images/brand/organic.png")}
                   alt="Organic"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />

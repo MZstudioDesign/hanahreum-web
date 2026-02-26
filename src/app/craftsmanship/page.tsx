@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FullBleedSection from "@/components/ui/FullBleedSection";
 import MaterialExpandCards from "@/components/sections/MaterialExpandCards";
+import { assetPath } from "@/lib/paths";
 
 const processes = [
   {
@@ -248,7 +249,7 @@ export default function CraftsmanshipPage() {
 
       {/* Materials divider */}
       <FullBleedSection
-        bgImage="/images/brand/cozy-warm.png"
+        bgImage={assetPath("/images/brand/cozy-warm.png")}
         overlay="heavy"
         minHeight="60vh"
       >

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { timelineEvents } from "@/data/collections";
 import FullBleedSection from "@/components/ui/FullBleedSection";
 import { Timeline } from "@/components/ui/Timeline";
+import { assetPath } from "@/lib/paths";
 
 const partners = [
   "IJM International",
@@ -164,14 +165,14 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="reveal stagger-1 aspect-[3/4] overflow-hidden">
                   <img
-                    src="/images/brand/the-home.png"
+                    src={assetPath("/images/brand/the-home.png")}
                     alt="Hanahreum brand editorial"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="reveal stagger-2 aspect-[3/4] overflow-hidden mt-16">
                   <img
-                    src="/images/brand/modern.png"
+                    src={assetPath("/images/brand/modern.png")}
                     alt="Modern interior design"
                     className="w-full h-full object-cover"
                   />

@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/paths";
+
 export interface Product {
   id: string;
   name: string;
@@ -34,7 +36,7 @@ export const products: Product[] = [
     description: "Deep charcoal base with subtle amber undertones. Inspired by volcanic landscapes.",
     dimensions: "6' × 9'",
     material: "Premium Wool",
-    image: "/images/brand/the-home.png",
+    image: assetPath("/images/brand/the-home.png"),
     price: "$1,890",
   },
   {
@@ -44,7 +46,7 @@ export const products: Product[] = [
     description: "Twilight gradients woven into a lush wool canvas. The quiet hour before night.",
     dimensions: "9' × 12'",
     material: "Merino Wool Blend",
-    image: "/images/brand/soft-calm.png",
+    image: assetPath("/images/brand/soft-calm.png"),
     price: "$3,240",
   },
   {
@@ -74,7 +76,7 @@ export const products: Product[] = [
     description: "Inspired by desert rock formations. Layered wash creates dimensional depth.",
     dimensions: "5' × 7'",
     material: "Cotton Blend",
-    image: "/images/brand/neutrality.png",
+    image: assetPath("/images/brand/neutrality.png"),
     price: "$1,380",
   },
   {
@@ -84,7 +86,7 @@ export const products: Product[] = [
     description: "Ancient riverbed patterns reimagined in contemporary textile. Hand-distressed finish.",
     dimensions: "6' × 9'",
     material: "Faux Cashmere",
-    image: "/images/brand/organic.png",
+    image: assetPath("/images/brand/organic.png"),
     price: "$1,720",
   },
   {
@@ -114,7 +116,7 @@ export const products: Product[] = [
     description: "Delicate ivory weave with raised thread patterns. Minimal and serene.",
     dimensions: "6' × 9'",
     material: "Egyptian Cotton",
-    image: "/images/brand/modern.png",
+    image: assetPath("/images/brand/modern.png"),
     price: "$1,540",
   },
   {
@@ -134,7 +136,7 @@ export const products: Product[] = [
     description: "Single-hue mastery. Deep olive green processed through twelve wash cycles.",
     dimensions: "6' × 9'",
     material: "Wool-Silk Blend",
-    image: "/images/brand/a-style.png",
+    image: assetPath("/images/brand/a-style.png"),
     price: "$2,750",
   },
   {
@@ -144,7 +146,7 @@ export const products: Product[] = [
     description: "The deepest black achievable in textile. Light-absorbing fibers create a dimensional void.",
     dimensions: "8' × 10'",
     material: "Premium Wool",
-    image: "/images/brand/over-decor.png",
+    image: assetPath("/images/brand/over-decor.png"),
     price: "$3,100",
   },
   {
@@ -154,7 +156,7 @@ export const products: Product[] = [
     description: "Gradient from near-black to pewter gray. Inspired by storm clouds at dusk.",
     dimensions: "9' × 12'",
     material: "Wool-Cashmere",
-    image: "/images/brand/cozy-warm.png",
+    image: assetPath("/images/brand/cozy-warm.png"),
     price: "$3,620",
   },
   {
@@ -194,7 +196,7 @@ export const products: Product[] = [
     description: "Barely-there off-white. A canvas for architectural spaces demanding visual silence.",
     dimensions: "9' × 12'",
     material: "Organic Cotton",
-    image: "/images/brand/the-home.png",
+    image: assetPath("/images/brand/the-home.png"),
     price: "$2,050",
   },
   {
@@ -204,7 +206,7 @@ export const products: Product[] = [
     description: "Silk-infused wool in jet black. Lustrous sheen shifts with ambient light.",
     dimensions: "6' × 9'",
     material: "Wool-Silk",
-    image: "/images/brand/soft-calm.png",
+    image: assetPath("/images/brand/soft-calm.png"),
     price: "$3,850",
   },
   {
@@ -214,7 +216,7 @@ export const products: Product[] = [
     description: "Pale taupe and warm gray. Inspired by sun-bleached wood on quiet coastlines.",
     dimensions: "8' × 10'",
     material: "New Zealand Wool",
-    image: "/images/brand/neutrality.png",
+    image: assetPath("/images/brand/neutrality.png"),
     price: "$2,680",
   },
   {
@@ -224,7 +226,7 @@ export const products: Product[] = [
     description: "Multi-layered brown tones like river sediment. Organic wash creates unique textures.",
     dimensions: "5' × 7'",
     material: "Faux Cashmere",
-    image: "/images/brand/organic.png",
+    image: assetPath("/images/brand/organic.png"),
     price: "$1,480",
   },
   {
@@ -234,7 +236,7 @@ export const products: Product[] = [
     description: "Warm oatmeal cotton with subtle flecking. Farm-to-floor ethical sourcing.",
     dimensions: "6' × 9'",
     material: "Organic Cotton",
-    image: "/images/products/listing-1.png",
+    image: assetPath("/images/products/listing-1.png"),
     price: "$1,350",
   },
   {
@@ -244,7 +246,7 @@ export const products: Product[] = [
     description: "Coffee-dark fibers with matte finish. Rich, grounding presence for any interior.",
     dimensions: "8' × 10'",
     material: "Premium Wool",
-    image: "/images/brand/a-style.png",
+    image: assetPath("/images/brand/a-style.png"),
     price: "$2,890",
   },
 ];
@@ -257,7 +259,7 @@ export const journalArticles = [
     category: "Process",
     date: "2024.11",
     readTime: "8 min",
-    image: "/images/brand/over-decor.png",
+    image: assetPath("/images/brand/over-decor.png"),
     excerpt: "At Hanahreum, achieving the perfect midnight black requires twelve immersion cycles over fourteen days. Our master dyers work with natural indigo and iron oxide compounds, layering pigment until the fiber itself becomes a vessel of depth.",
   },
   {
@@ -267,7 +269,7 @@ export const journalArticles = [
     category: "Guide",
     date: "2024.09",
     readTime: "12 min",
-    image: "/images/brand/the-home.png",
+    image: assetPath("/images/brand/the-home.png"),
     excerpt: "The difference between a $200 rug and a $2,000 rug begins at the source. Fiber diameter, crimp frequency, and lanolin content determine not just feel, but longevity. We source exclusively from heritage flocks in New Zealand and Patagonia.",
   },
   {
@@ -277,7 +279,7 @@ export const journalArticles = [
     category: "Research",
     date: "2024.07",
     readTime: "10 min",
-    image: "/images/brand/modern.png",
+    image: assetPath("/images/brand/modern.png"),
     excerpt: "In collaboration with architectural acoustics firm Resonance Lab, we developed weave patterns optimized for sound absorption. Our Dense Weave series reduces ambient noise by up to 40% in open-plan spaces.",
   },
   {
@@ -287,7 +289,7 @@ export const journalArticles = [
     category: "Magazine",
     date: "2024.03",
     readTime: "15 min",
-    image: "/images/brand/soft-calm.png",
+    image: assetPath("/images/brand/soft-calm.png"),
     excerpt: "2023 was a transformative year. Our design team attended twelve architectural exhibitions across Seoul, Tokyo, and Milan. The insights gathered shaped our 2024 collection direction—darker, denser, more deliberate.",
   },
   {
@@ -297,7 +299,7 @@ export const journalArticles = [
     category: "Philosophy",
     date: "2024.01",
     readTime: "6 min",
-    image: "/images/brand/neutrality.png",
+    image: assetPath("/images/brand/neutrality.png"),
     excerpt: "In an age of fast production, Hanahreum chooses slowness. Each rug in our Signature Wool line takes 45 days from raw fiber to finished product. This isn't inefficiency—it's intention.",
   },
   {
@@ -307,7 +309,7 @@ export const journalArticles = [
     category: "Design",
     date: "2023.11",
     readTime: "9 min",
-    image: "/images/brand/cozy-warm.png",
+    image: assetPath("/images/brand/cozy-warm.png"),
     excerpt: "Earth tones aren't just aesthetic choices—they're neurological ones. Research from the Environmental Psychology Institute shows that warm neutrals in floor textiles reduce cortisol levels by 12% compared to stark whites.",
   },
 ];
@@ -318,41 +320,41 @@ export const timelineEvents = [
     month: "May",
     title: "Origin",
     description: "Hanahreum began in the Korean military. The journey of our first venture started with a tank driver. After freezing training sessions, an idea began to take shape.",
-    image: "/images/brand/the-home.png",
+    image: assetPath("/images/brand/the-home.png"),
   },
   {
     year: "2020",
     month: "Dec",
     title: "The First Milestone",
     description: "The Trophy Shelf, our first product developed during nearly two years of military service, holds a special place in our hearts.",
-    image: "/images/brand/neutrality.png",
+    image: assetPath("/images/brand/neutrality.png"),
   },
   {
     year: "2021",
     month: "Apr",
     title: "Odd Crack & Project 21",
     description: "The day we started conceptualizing Project 21. We became Odd Crack—finding tiny gaps in life and filling them with our own splash of color.",
-    image: "/images/brand/organic.png",
+    image: assetPath("/images/brand/organic.png"),
   },
   {
     year: "2023",
     month: "",
     title: "Inside Out",
     description: "A year dedicated to honing our design skills. We formed a design team, attended architectural expos, and launched our design magazine 'Make a Sign'.",
-    image: "/images/brand/modern.png",
+    image: assetPath("/images/brand/modern.png"),
   },
   {
     year: "2023",
     month: "Nov",
     title: "IJM Partnership",
     description: "Grateful to have been part of IJM (International Justice Mission), working alongside a team dedicated to upholding justice.",
-    image: "/images/brand/a-style.png",
+    image: assetPath("/images/brand/a-style.png"),
   },
   {
     year: "2024",
     month: "Mar",
     title: "Global Expansion",
     description: "Team Odd Crack is gearing up for Australia. Today, we continue 'Filling Cracks, Making Odd.' Extraordinary joy to the world.",
-    image: "/images/brand/cozy-warm.png",
+    image: assetPath("/images/brand/cozy-warm.png"),
   },
 ];

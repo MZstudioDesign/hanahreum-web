@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { journalArticles } from "@/data/collections";
 import { ArrowUpRight } from "lucide-react";
 import FullBleedSection from "@/components/ui/FullBleedSection";
+import { assetPath } from "@/lib/paths";
 
 export default function JournalPage() {
   const featured = journalArticles[0];
@@ -13,7 +14,7 @@ export default function JournalPage() {
     <>
       {/* Hero */}
       <FullBleedSection
-        bgImage="/images/brand/modern.png"
+        bgImage={assetPath("/images/brand/modern.png")}
         overlay="heavy"
         minHeight="60vh"
       >

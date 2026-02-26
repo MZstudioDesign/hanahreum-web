@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { assetPath } from "@/lib/paths";
 
 export default function ContactCTA() {
   return (
@@ -12,7 +13,7 @@ export default function ContactCTA() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/images/brand/cozy-warm.png)" }}
+        style={{ backgroundImage: `url(${assetPath("/images/brand/cozy-warm.png")})` }}
       />
       <div className="absolute inset-0 bg-black/80" />
 

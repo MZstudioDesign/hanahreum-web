@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 export default function CraftsmanshipDivider() {
   const ref = useRef<HTMLElement>(null);
@@ -26,7 +27,7 @@ export default function CraftsmanshipDivider() {
         className="absolute inset-[-20%] bg-cover bg-center"
       >
         <img
-          src="/images/brand/soft-calm.png"
+          src={assetPath("/images/brand/soft-calm.png")}
           alt="Textile macro detail"
           className="w-full h-full object-cover"
         />

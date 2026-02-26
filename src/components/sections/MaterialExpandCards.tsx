@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 const materials = [
   {
@@ -33,7 +34,7 @@ const materials = [
     origin: "Premium Fusion",
     detail:
       "Lustrous sheen meets resilient structure. Silk-infused fibers shift with ambient light.",
-    image: "/images/brand/over-decor.png",
+    image: assetPath("/images/brand/over-decor.png"),
   },
 ];
 
