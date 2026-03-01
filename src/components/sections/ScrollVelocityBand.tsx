@@ -1,69 +1,44 @@
 "use client";
 
-import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
-function VelocityRow({
+function MarqueeRow({
   text,
-  baseVelocity,
+  direction,
 }: {
   text: string;
-  baseVelocity: number;
+  direction: "left" | "right";
 }) {
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false,
-  });
+  const trackRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLSpanElement>(null);
+  const [copies, setCopies] = useState(10);
 
-  const copyRef = useRef<HTMLSpanElement>(null);
-  const directionFactor = useRef<number>(1);
-
-  function wrap(min: number, max: number, v: number): number {
-    const range = max - min;
-    const mod = (((v - min) % range) + range) % range;
-    return mod + min;
-  }
-
-  const x = useTransform(baseX, (v) => {
-    const el = copyRef.current;
-    if (!el) return "0px";
-    const w = el.offsetWidth;
-    if (w === 0) return "0px";
-    return `${wrap(-w, 0, v)}px`;
-  });
-
-  useAnimationFrame((_t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-    if (velocityFactor.get() < 0) directionFactor.current = -1;
-    else if (velocityFactor.get() > 0) directionFactor.current = 1;
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-    baseX.set(baseX.get() + moveBy);
-  });
+  useEffect(() => {
+    const calculate = () => {
+      if (!contentRef.current) return;
+      const w = contentRef.current.offsetWidth;
+      if (w === 0) return;
+      const needed = Math.ceil(window.innerWidth / w) + 2;
+      setCopies(Math.max(needed * 2, 10));
+    };
+    calculate();
+    window.addEventListener("resize", calculate);
+    return () => window.removeEventListener("resize", calculate);
+  }, [text]);
 
   return (
     <div className="relative overflow-hidden py-3">
-      <motion.div
+      <div
+        ref={trackRef}
         className="flex whitespace-nowrap"
-        style={{ x }}
+        style={{
+          animation: `marquee-${direction} 40s linear infinite`,
+        }}
       >
-        {Array.from({ length: 8 }).map((_, i) => (
+        {Array.from({ length: copies }).map((_, i) => (
           <span
             key={i}
-            ref={i === 0 ? copyRef : null}
+            ref={i === 0 ? contentRef : null}
             className="flex-shrink-0 font-display text-4xl md:text-6xl lg:text-7xl tracking-[-0.02em] text-[var(--color-text-primary)]/15 mx-8"
           >
             {text}
@@ -72,16 +47,28 @@ function VelocityRow({
             </span>
           </span>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
 
 export default function ScrollVelocityBand() {
   return (
-    <section className="py-12 md:py-16 bg-[var(--color-bg-primary)] overflow-hidden border-y border-[var(--color-border)]">
-      <VelocityRow text="Timeless Beauty" baseVelocity={80} />
-      <VelocityRow text="Searching The Essence" baseVelocity={-80} />
-    </section>
+    <>
+      <style jsx global>{`
+        @keyframes marquee-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+      `}</style>
+      <section className="py-12 md:py-16 bg-[var(--color-bg-primary)] overflow-hidden border-y border-[var(--color-border)]">
+        <MarqueeRow text="Timeless Beauty" direction="left" />
+        <MarqueeRow text="Searching The Essence" direction="right" />
+      </section>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { assetPath } from "@/lib/paths";
 
@@ -141,14 +142,14 @@ function MenuItem({
       className="flowing-menu__item flex-1 relative overflow-hidden text-center border-t border-[var(--color-border)]"
       ref={itemRef}
     >
-      <a
+      <Link
         className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline whitespace-nowrap font-semibold text-[4vh] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         {text}
-      </a>
+      </Link>
       <div
         className="absolute top-0 left-0 overflow-hidden w-full h-full pointer-events-none translate-y-[101%]"
         ref={marqueeRef}
@@ -198,6 +199,8 @@ export default function FlowingMenuSection() {
           <MenuItem key={idx} {...item} />
         ))}
       </div>
+      {/* Spacing below Partner With Us */}
+      <div className="h-24 md:h-32 bg-[var(--color-bg-primary)]" />
     </section>
   );
 }

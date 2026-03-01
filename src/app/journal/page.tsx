@@ -1,14 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { journalArticles } from "@/data/collections";
 import { ArrowUpRight } from "lucide-react";
 import FullBleedSection from "@/components/ui/FullBleedSection";
+import ArticleModal from "@/components/ui/ArticleModal";
 import { assetPath } from "@/lib/paths";
 
 export default function JournalPage() {
   const featured = journalArticles[0];
   const remaining = journalArticles.slice(1);
+  const [selectedArticle, setSelectedArticle] = useState<
+    (typeof journalArticles)[0] | null
+  >(null);
 
   return (
     <>
@@ -38,7 +43,7 @@ export default function JournalPage() {
         </div>
       </FullBleedSection>
 
-      {/* Featured article - full width editorial */}
+      {/* Featured article */}
       <section className="py-20 md:py-32 bg-[var(--color-bg-primary)]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
           <motion.div
@@ -47,9 +52,9 @@ export default function JournalPage() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
             className="group cursor-pointer"
+            onClick={() => setSelectedArticle(featured)}
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
-              {/* Large image */}
               <div className="lg:col-span-8 overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[70vh]">
                 <img
                   src={featured.image}
@@ -57,7 +62,6 @@ export default function JournalPage() {
                   className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                 />
               </div>
-              {/* Text overlay on right */}
               <div className="lg:col-span-4 bg-[var(--color-bg-secondary)] p-8 md:p-12 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
@@ -88,7 +92,7 @@ export default function JournalPage() {
         </div>
       </section>
 
-      {/* Editorial asymmetric grid for remaining articles */}
+      {/* Editorial asymmetric grid */}
       <section className="pb-32 md:pb-48 bg-[var(--color-bg-primary)]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
@@ -114,6 +118,7 @@ export default function JournalPage() {
                       ? "md:col-span-5 md:row-span-2"
                       : "md:col-span-5"
                   }`}
+                  onClick={() => setSelectedArticle(article)}
                 >
                   <div
                     className={`relative overflow-hidden bg-[var(--color-bg-elevated)] ${
@@ -144,7 +149,6 @@ export default function JournalPage() {
                     </div>
                   </div>
 
-                  {/* Excerpt below image */}
                   <div className="p-6 md:p-8 bg-[var(--color-bg-secondary)]">
                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3 mb-4">
                       {article.excerpt}
@@ -160,6 +164,13 @@ export default function JournalPage() {
           </div>
         </div>
       </section>
+
+      {/* Article Modal */}
+      <ArticleModal
+        isOpen={!!selectedArticle}
+        onClose={() => setSelectedArticle(null)}
+        article={selectedArticle}
+      />
     </>
   );
 }

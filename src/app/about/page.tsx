@@ -8,33 +8,27 @@ import { Timeline } from "@/components/ui/Timeline";
 import { assetPath } from "@/lib/paths";
 
 const partners = [
+  "6 Factory Partners",
+  "3 Design Partners",
+  "FBABEE",
+  "Global Legal & Compliance",
+  "MZS Design Studio",
   "IJM International",
-  "Resonance Lab",
-  "Seoul Design Foundation",
-  "Melbourne Textile Guild",
-  "Helium 10",
-  "Amazon Global Selling",
-  "Korea Trade Center",
-  "Architectural Digest Korea",
+  "Global Markets (US, AU, CA, UAE)",
+  "Official Brand (US, KR)",
 ];
 
 const teamMembers = [
   {
-    name: "Jaeho Choi",
-    role: "Founder & Creative Director",
-    bio: "From tank driver in the Korean military to global textile visionary. Jaeho founded Hanahreum with the belief that beauty should endure beyond fleeting trends.",
+    name: "Yecheon Yie",
+    role: "Founder & Owner",
+    bio: "Founded in 2019 through product development, the brand officially launched its first product in 2020. What began with creating products soon expanded into marketing, business strategy, operational systems, and capital management — each carefully studied, tested, and applied firsthand. Growth was never accidental, but the result of deliberate decisions and continuous refinement.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
   },
   {
-    name: "Soyeon Park",
-    role: "Head of Design",
-    bio: "With a decade of experience in textile design, Soyeon leads the creative direction of every collection. Her eye for texture and tone defines the Hanahreum aesthetic.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    name: "Minjun Kim",
-    role: "Brand Strategist",
-    bio: "Minjun bridges the gap between craft and commerce. His strategic vision has expanded Hanahreum to twelve countries across three continents.",
+    name: "Yutaek Oh",
+    role: "Design & Marketing Lead",
+    bio: "Yutaek joined the team in 2024, leading design and marketing while overseeing the technical structure behind the brand. He shapes the visual direction, refines communication strategy, and strengthens the internal systems that support execution. His role bridges creativity and structure — ensuring the brand is not only seen, but built to last.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80",
   },
 ];
@@ -195,7 +189,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-4xl">
             {teamMembers.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -278,10 +272,10 @@ export default function AboutPage() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
             {[
-              { label: "Countries", value: "12+" },
-              { label: "Partners", value: "45+" },
-              { label: "Collections", value: "4" },
-              { label: "Years", value: "5+" },
+              { label: "Countries", value: "5+" },
+              { label: "Partners", value: "16+" },
+              { label: "Collections", value: "6" },
+              { label: "Years", value: "6+" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

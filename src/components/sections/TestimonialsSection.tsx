@@ -1,91 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/paths";
 
 interface Testimonial {
   quote: string;
   name: string;
   role: string;
-  avatarSrc: string;
 }
+
+const amazonIcon = assetPath("/images/logos/amazon-icon.png");
 
 const testimonialColumns: Testimonial[][] = [
   [
     {
       quote:
-        "The texture of Hanahreum rugs is unlike anything else. Every guest asks where we found them.",
-      name: "Emily Park",
-      role: "Interior Architect, Seoul",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=60",
+        "This rug really does make such a difference — it just looks elevated and finished. The creasing settled after the first week and looks just fine now. Great for putting down for company.",
+      name: "Alli B***",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "We specified Hanahreum for our Melbourne hotel project. The acoustic properties exceeded our expectations.",
-      name: "James Liu",
-      role: "Principal, Resonance Lab",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60",
+        "This faux cashmere rug fills my lounge space nicely. It has a modern aesthetic that suits rooms with earthy tones and looks great on floorboards. The rug is soft and comfortable for bare feet, children or pets.",
+      name: "P**l",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "Their commitment to quality is genuine. Five years in and the rugs look even better with age.",
-      name: "Minjung Yoo",
-      role: "Homeowner, Gangnam",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=60",
+        "This area rug adds a warm and modern touch to the room, and the neutral beige tone works beautifully with different décor styles. A great balance of comfort, style and practicality.",
+      name: "Zakia C****",
+      role: "Verified Purchase",
     },
   ],
   [
     {
       quote:
-        "Working with Odd Crack has been transformative for our retail space. The rugs anchor the entire aesthetic.",
-      name: "David Choi",
-      role: "Creative Director, Trophy Shelf",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=60",
+        "Most importantly my young boys like it and are more than happy to fall asleep on it. The rubber backing stops it from slipping on my tiled floors. At approximately $120 this rug represents good value.",
+      name: "John H**",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "The stone-wash process creates something truly unique. No two pieces are alike — that's the beauty.",
-      name: "Soyeon Kim",
-      role: "Textile Curator, MMCA",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=60",
+        "I'm delighted with my new rug, and I'm impressed by its softness and smooth texture. The pattern and colours are an exact match to the display image, and it complements my bedroom beautifully.",
+      name: "A. Sm****",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "As a distributor, their wholesale terms are fair and their product quality is consistently premium.",
-      name: "Michael Tan",
-      role: "CEO, Pacific Textiles SG",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=60",
+        "This rug is so incredibly soft. There was no smell at all when it arrived. The base is non-slip, so it is great for any surface. Very pleased overall.",
+      name: "Verified B****",
+      role: "Verified Purchase",
     },
   ],
   [
     {
       quote:
-        "From ordering to delivery, Hanahreum operates with a professionalism that matches their craftsmanship.",
-      name: "Jiwon Lee",
-      role: "Buyer, Hyundai Dept. Store",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=60",
+        "I really like the visual earthy design of this rug. The size is really good for a lounge room setup — it fits perfectly with two 2–3 seater lounges.",
+      name: "Jes****",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "The Deep Monochrome collection changed how I think about minimal interiors. It's art for the floor.",
-      name: "Yuto Nakamura",
-      role: "Architect, Tokyo",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=60",
+        "I love that it's machine washable and has a rubberised underside to prevent slipping. Overall, it's a great product, and I'm very satisfied with my purchase.",
+      name: "A. Sm****",
+      role: "Verified Purchase",
     },
     {
       quote:
-        "Hanahreum understands that a rug isn't just decor — it's the foundation of a room's character.",
-      name: "Sarah Bennett",
-      role: "Editor, Architectural Digest AU",
-      avatarSrc:
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=60",
+        "The faux cashmere texture feels soft underfoot, yet it's durable and pet-friendly. I really appreciate the non-slip backing, which keeps it securely in place. It's also easy to clean and maintains its shape well.",
+      name: "Zakia C****",
+      role: "Verified Purchase",
     },
   ],
 ];
@@ -98,9 +82,9 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </p>
       <div className="flex items-center gap-3">
         <img
-          src={testimonial.avatarSrc}
-          alt={testimonial.name}
-          className="w-10 h-10 rounded-full object-cover grayscale"
+          src={amazonIcon}
+          alt="Amazon"
+          className="w-10 h-10 rounded-full object-contain bg-white p-1"
         />
         <div>
           <p className="text-sm font-medium text-[var(--color-text-primary)]">

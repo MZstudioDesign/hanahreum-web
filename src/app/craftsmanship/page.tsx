@@ -6,49 +6,49 @@ import FullBleedSection from "@/components/ui/FullBleedSection";
 import MaterialExpandCards from "@/components/sections/MaterialExpandCards";
 import { assetPath } from "@/lib/paths";
 
-const processes = [
+const materials = [
   {
     step: "01",
-    title: "Fiber Selection",
+    title: "Faux Cashmere",
     description:
-      "Every masterpiece begins at the source. We source exclusively from heritage flocks in New Zealand, Patagonia, and the highlands of Scotland. Fiber diameter, crimp frequency, and lanolin content are measured to the micron.",
-    image: "https://images.unsplash.com/photo-1716808154267-98c9b7f939e4?w=1200&q=80",
+      "A synthetic microfiber engineered to replicate the softness of natural cashmere. The ultra-fine filaments (typically under 1.0 denier) create a velvet-like surface that feels luxurious underfoot. Because it's machine-washable and resistant to pilling, faux cashmere is ideal for high-traffic living areas. Its low-pile construction also means it lays flat quickly and works well with underfloor heating systems.",
+    image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1200&q=80",
     align: "left" as const,
     hasShape: false,
   },
   {
     step: "02",
-    title: "Natural Dyeing",
+    title: "Premium Wool",
     description:
-      "Achieving the perfect midnight black requires twelve immersion cycles over fourteen days. Our master dyers work with natural indigo and iron oxide compounds, layering pigment until the fiber itself becomes a vessel of depth.",
-    image: "https://images.unsplash.com/photo-1532526674046-5b3f6d7d2ab1?w=1200&q=80",
+      "Sourced from heritage flocks in New Zealand and Patagonia, premium wool fibers are measured by micron count — the finer the fiber, the softer the hand feel. Wool naturally regulates temperature, absorbs moisture without feeling damp, and is inherently flame-resistant. Over time, the lanolin in wool develops a unique patina, making each rug age with character rather than wear.",
+    image: "https://images.unsplash.com/photo-1716808154267-98c9b7f939e4?w=1200&q=80",
     align: "right" as const,
     hasShape: true,
   },
   {
     step: "03",
-    title: "Hand Weaving",
+    title: "Organic Cotton",
     description:
-      "Each knot is a decision. Our artisans average 8,000 knots per day on a single rug, working in natural light to ensure color consistency. A 6×9 Signature Wool piece requires 45 days of continuous handwork.",
-    image: "https://images.unsplash.com/photo-1578314874366-1975eac6e32a?w=1200&q=80",
+      "Grown without synthetic pesticides or fertilizers, organic cotton produces a fiber that is breathable, hypoallergenic, and gentle on sensitive skin. Cotton rugs are lightweight yet substantial in texture, making them perfect for layering. The natural fiber accepts vegetable-based dyes beautifully, resulting in muted, earthy tones that deepen over time. Cotton is fully biodegradable, aligning with zero-waste design principles.",
+    image: "https://images.unsplash.com/photo-1661099548731-fc8f74fc9dd9?w=1200&q=80",
     align: "left" as const,
     hasShape: false,
   },
   {
     step: "04",
-    title: "Artisan Washing",
+    title: "Cotton-Linen Blend",
     description:
-      "Post-weave, rugs undergo our proprietary stone-wash process. River stones and mineral-rich water soften the fibers while creating the distinctive patina that makes each piece unique.",
-    image: "https://images.unsplash.com/photo-1609593891818-75522e1b8bb7?w=1200&q=80",
+      "Combining the softness of cotton with the structural integrity of linen creates a textile with exceptional drape and durability. Linen fibers are two to three times stronger than cotton, adding tensile strength to the weave without sacrificing comfort. This blend naturally becomes softer with every wash, develops a lived-in character, and resists static buildup — making it particularly suited for dry, heated interiors.",
+    image: "https://images.unsplash.com/photo-1680773525653-f14b98e5acf6?w=1200&q=80",
     align: "right" as const,
     hasShape: true,
   },
   {
     step: "05",
-    title: "Quality Assurance",
+    title: "Wool-Silk Blend",
     description:
-      "Every rug passes through a 47-point inspection. Density, colorfastness, dimensional accuracy, and tactile quality—each metric must meet our uncompromising standard before receiving the Hanahreum mark.",
-    image: "https://images.unsplash.com/photo-1560258632-fb994fd2bd44?w=1200&q=80",
+      "The most luxurious of textile combinations. Silk fibers add a subtle luminous sheen that shifts with ambient light, while wool provides density and warmth. The silk content (typically 20–30%) creates a surface that reflects light differently from every angle, giving the rug a dimensional quality impossible to achieve with wool alone. This blend requires specialized stone-washing to soften without damaging the delicate silk strands.",
+    image: "https://images.unsplash.com/photo-1578314874366-1975eac6e32a?w=1200&q=80",
     align: "left" as const,
     hasShape: false,
   },
@@ -62,7 +62,7 @@ function ProcessBlock({
   align,
   index,
   hasShape,
-}: (typeof processes)[0] & { index: number }) {
+}: (typeof materials)[0] & { index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -82,7 +82,6 @@ function ProcessBlock({
         !isLeft ? "lg:direction-rtl" : ""
       }`}
     >
-      {/* Image with optional accent shape behind */}
       <div
         className={`${
           isLeft ? "lg:col-span-7" : "lg:col-span-7 lg:col-start-6"
@@ -104,7 +103,6 @@ function ProcessBlock({
         </motion.div>
       </div>
 
-      {/* Text */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
         className={`${
@@ -137,21 +135,20 @@ export default function CraftsmanshipPage() {
 
   return (
     <>
-      {/* Hero — ConcreteCouture style: texture background + layered typography */}
+      {/* Hero — dark workshop atmosphere */}
       <section ref={heroRef} className="relative w-full h-screen overflow-hidden">
-        {/* Texture background with parallax zoom */}
         <motion.div style={{ scale: heroScale }} className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80"
-            alt="Textile texture closeup"
+            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1600&q=80"
+            alt="Dark textile workshop with warm desk lamp"
             className="w-full h-full object-cover"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/80" />
 
-        {/* Layered typography — ConcreteCouture inspired */}
+        {/* Layered typography */}
         <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-12 max-w-[1440px] mx-auto">
-          {/* Giant ghost text in background */}
+          {/* Giant ghost text */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.04 }}
@@ -170,7 +167,6 @@ export default function CraftsmanshipPage() {
             The Process
           </motion.p>
 
-          {/* Main title — large, bold, left-aligned */}
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -180,7 +176,6 @@ export default function CraftsmanshipPage() {
             Craft.
           </motion.h1>
 
-          {/* Subtitle lines offset */}
           <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-12">
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -195,6 +190,7 @@ export default function CraftsmanshipPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 1 }}
               className="font-display text-3xl md:text-5xl text-white/40 italic"
+              style={{ filter: "blur(1.5px)" }}
             >
               Only texture.
             </motion.p>
@@ -204,6 +200,7 @@ export default function CraftsmanshipPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 1 }}
             className="font-display text-4xl md:text-6xl text-white mt-4 md:ml-[20%]"
+            style={{ filter: "blur(1.5px)" }}
           >
             Only soul.
           </motion.p>
@@ -220,10 +217,10 @@ export default function CraftsmanshipPage() {
             viewport={{ once: true }}
             className="font-display text-5xl md:text-7xl lg:text-[120px] leading-[0.95] tracking-tight text-[var(--color-text-primary)]"
           >
-            From Fiber
+            What We
             <br />
             <span className="italic text-[var(--color-accent-light)]">
-              to Floor.
+              Work With.
             </span>
           </motion.h2>
           <motion.p
@@ -233,16 +230,16 @@ export default function CraftsmanshipPage() {
             viewport={{ once: true }}
             className="text-xs tracking-[0.4em] uppercase text-[var(--color-accent)] mt-8"
           >
-            Five Stages of Mastery
+            Five Materials, Five Characters
           </motion.p>
         </div>
       </section>
 
-      {/* Process blocks */}
+      {/* Material blocks */}
       <section className="pb-32 md:pb-48 bg-[var(--color-bg-primary)]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-          {processes.map((process, i) => (
-            <ProcessBlock key={process.step} {...process} index={i} />
+          {materials.map((material, i) => (
+            <ProcessBlock key={material.step} {...material} index={i} />
           ))}
         </div>
       </section>

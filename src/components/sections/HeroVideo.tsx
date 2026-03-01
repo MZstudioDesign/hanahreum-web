@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Volume2, VolumeX } from "lucide-react";
 import { assetPath } from "@/lib/paths";
 
 export default function HeroVideo() {
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -16,6 +19,28 @@ export default function HeroVideo() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
+  // Fade volume based on scroll position
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (v) => {
+      if (videoRef.current && !isMuted) {
+        const volume = Math.max(0, 1 - v * 2.5);
+        videoRef.current.volume = volume;
+      }
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress, isMuted]);
+
+  const toggleMute = useCallback(() => {
+    if (videoRef.current) {
+      const next = !isMuted;
+      videoRef.current.muted = next;
+      if (!next) {
+        videoRef.current.volume = 1;
+      }
+      setIsMuted(next);
+    }
+  }, [isMuted]);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 300);
@@ -27,6 +52,7 @@ export default function HeroVideo() {
       {/* Video background with parallax */}
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
@@ -42,6 +68,18 @@ export default function HeroVideo() {
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
+
+      {/* Sound toggle button */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={loaded ? { opacity: 1 } : {}}
+        transition={{ delay: 2.5, duration: 1 }}
+        onClick={toggleMute}
+        className="absolute bottom-8 right-8 z-20 p-3 border border-white/20 bg-black/30 backdrop-blur-sm text-white/70 hover:text-white hover:border-white/40 transition-all duration-300 cursor-pointer"
+        aria-label={isMuted ? "Unmute" : "Mute"}
+      >
+        {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+      </motion.button>
 
       {/* Content */}
       <motion.div
@@ -78,34 +116,15 @@ export default function HeroVideo() {
           Timeless Beauty, Crafted for Spaces.
         </motion.p>
 
-        {/* Philosophy line */}
+        {/* Philosophy line — brighter text */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={loaded ? { opacity: 1 } : {}}
           transition={{ delay: 2.0, duration: 1.5 }}
-          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-muted)] mt-4"
+          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-primary)] mt-4"
         >
           The Essence of Textile
         </motion.p>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={loaded ? { opacity: 1 } : {}}
-          transition={{ delay: 2.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-text-muted)]">
-              Scroll
-            </span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-px h-10 bg-gradient-to-b from-[var(--color-accent)] to-transparent"
-            />
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );

@@ -95,18 +95,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-[var(--color-text-secondary)]">
                 <Mail size={16} className="mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                <span>wholesale@hanahreum.com</span>
+                <span>nicknicksmart@gmail.com</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-[var(--color-text-secondary)]">
                 <Phone size={16} className="mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                <span>+1 (213) 555-0147</span>
+                <span>+82 10-7683-9905</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-[var(--color-text-secondary)]">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-[var(--color-accent)]" />
                 <span>
-                  Hanahreum Global HQ<br />
-                  328 Design District, Gangnam-gu<br />
-                  Seoul, South Korea 06232
+                  599, Achasan-ro, Gwangjin-gu<br />
+                  Seoul, 04968<br />
+                  Republic of Korea
                 </span>
               </li>
             </ul>
@@ -120,19 +120,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-[var(--color-text-secondary)]">
               <li>
                 <span className="text-[var(--color-text-muted)]">Registration:</span>{" "}
-                201-86-47291
+                774-14-01878
               </li>
               <li>
                 <span className="text-[var(--color-text-muted)]">CEO:</span>{" "}
-                Jaeho Choi
+                Yecheon Yie
               </li>
               <li>
                 <span className="text-[var(--color-text-muted)]">Markets:</span>{" "}
-                USA, Australia, Singapore, Korea
-              </li>
-              <li>
-                <span className="text-[var(--color-text-muted)]">Currency:</span>{" "}
-                USD, AUD, SGD, KRW
+                USA, Australia, Canada, UAE, Korea
               </li>
               <li>
                 <span className="text-[var(--color-text-muted)]">Hours:</span>{" "}

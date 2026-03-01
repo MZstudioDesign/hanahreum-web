@@ -70,8 +70,8 @@ export default function Navbar() {
           <Link href="/" className="relative z-50 group">
             <motion.span
               className="font-logo text-2xl md:text-3xl text-[var(--color-text-primary)] tracking-[-0.03em] inline-block"
-              whileHover={{ letterSpacing: "0.02em" }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ opacity: 0.8 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               Hanahreum
             </motion.span>
