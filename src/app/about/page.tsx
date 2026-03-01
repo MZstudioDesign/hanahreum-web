@@ -189,38 +189,65 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-4xl">
-            {teamMembers.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: i * 0.15,
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="aspect-[3/4] overflow-hidden mb-6 bg-[var(--color-bg-elevated)]">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
-                  />
+          <div className="space-y-24 md:space-y-32">
+            {teamMembers.map((member, i) => {
+              const isReversed = i % 2 !== 0;
+              return (
+                <div
+                  key={member.name}
+                  className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    viewport={{ once: true }}
+                    className={`group ${
+                      isReversed
+                        ? "lg:col-span-7 lg:col-start-6 lg:row-start-1"
+                        : "lg:col-span-7"
+                    }`}
+                  >
+                    <div className="aspect-[3/4] overflow-hidden bg-[var(--color-bg-elevated)]">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                      />
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.15,
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    viewport={{ once: true }}
+                    className={`${
+                      isReversed
+                        ? "lg:col-span-5 lg:col-start-1 lg:row-start-1"
+                        : "lg:col-span-5"
+                    }`}
+                  >
+                    <h3 className="font-display text-3xl md:text-4xl text-[var(--color-text-primary)] mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs tracking-[0.2em] uppercase text-[var(--color-accent)] mb-6">
+                      {member.role}
+                    </p>
+                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </motion.div>
                 </div>
-                <h3 className="font-display text-2xl text-[var(--color-text-primary)] mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-xs tracking-[0.2em] uppercase text-[var(--color-accent)] mb-4">
-                  {member.role}
-                </p>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                  {member.bio}
-                </p>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
