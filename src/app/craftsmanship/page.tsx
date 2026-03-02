@@ -12,7 +12,7 @@ const materials = [
     title: "Faux Cashmere",
     description:
       "A synthetic microfiber engineered to replicate the softness of natural cashmere. The ultra-fine filaments (typically under 1.0 denier) create a velvet-like surface that feels luxurious underfoot. Because it's machine-washable and resistant to pilling, faux cashmere is ideal for high-traffic living areas. Its low-pile construction also means it lays flat quickly and works well with underfloor heating systems.",
-    image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1200&q=80",
+    image: assetPath("/images/craftsmanship/material-faux-cashmere.webp"),
     align: "left" as const,
     hasShape: false,
   },
@@ -21,7 +21,7 @@ const materials = [
     title: "Premium Wool",
     description:
       "Sourced from heritage flocks in New Zealand and Patagonia, premium wool fibers are measured by micron count — the finer the fiber, the softer the hand feel. Wool naturally regulates temperature, absorbs moisture without feeling damp, and is inherently flame-resistant. Over time, the lanolin in wool develops a unique patina, making each rug age with character rather than wear.",
-    image: "https://images.unsplash.com/photo-1716808154267-98c9b7f939e4?w=1200&q=80",
+    image: assetPath("/images/craftsmanship/material-premium-wool.webp"),
     align: "right" as const,
     hasShape: true,
   },
@@ -30,7 +30,7 @@ const materials = [
     title: "Organic Cotton",
     description:
       "Grown without synthetic pesticides or fertilizers, organic cotton produces a fiber that is breathable, hypoallergenic, and gentle on sensitive skin. Cotton rugs are lightweight yet substantial in texture, making them perfect for layering. The natural fiber accepts vegetable-based dyes beautifully, resulting in muted, earthy tones that deepen over time. Cotton is fully biodegradable, aligning with zero-waste design principles.",
-    image: "https://images.unsplash.com/photo-1661099548731-fc8f74fc9dd9?w=1200&q=80",
+    image: assetPath("/images/craftsmanship/material-organic-cotton.webp"),
     align: "left" as const,
     hasShape: false,
   },
@@ -39,7 +39,7 @@ const materials = [
     title: "Cotton-Linen Blend",
     description:
       "Combining the softness of cotton with the structural integrity of linen creates a textile with exceptional drape and durability. Linen fibers are two to three times stronger than cotton, adding tensile strength to the weave without sacrificing comfort. This blend naturally becomes softer with every wash, develops a lived-in character, and resists static buildup — making it particularly suited for dry, heated interiors.",
-    image: "https://images.unsplash.com/photo-1680773525653-f14b98e5acf6?w=1200&q=80",
+    image: assetPath("/images/craftsmanship/material-cotton-linen.webp"),
     align: "right" as const,
     hasShape: true,
   },
@@ -48,7 +48,7 @@ const materials = [
     title: "Wool-Silk Blend",
     description:
       "The most luxurious of textile combinations. Silk fibers add a subtle luminous sheen that shifts with ambient light, while wool provides density and warmth. The silk content (typically 20–30%) creates a surface that reflects light differently from every angle, giving the rug a dimensional quality impossible to achieve with wool alone. This blend requires specialized stone-washing to soften without damaging the delicate silk strands.",
-    image: "https://images.unsplash.com/photo-1578314874366-1975eac6e32a?w=1200&q=80",
+    image: assetPath("/images/craftsmanship/material-wool-silk.webp"),
     align: "left" as const,
     hasShape: false,
   },
@@ -139,7 +139,7 @@ export default function CraftsmanshipPage() {
       <section ref={heroRef} className="relative w-full h-screen overflow-hidden">
         <motion.div style={{ scale: heroScale }} className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1600&q=80"
+            src={assetPath("/images/craftsmanship/hero.webp")}
             alt="Dark textile workshop with warm desk lamp"
             className="w-full h-full object-cover"
           />
@@ -246,7 +246,7 @@ export default function CraftsmanshipPage() {
 
       {/* Materials divider */}
       <FullBleedSection
-        bgImage={assetPath("/images/brand/cozy-warm.png")}
+        bgImage={assetPath("/images/craftsmanship/quote-section.webp")}
         overlay="heavy"
         minHeight="60vh"
       >

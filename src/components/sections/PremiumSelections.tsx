@@ -8,22 +8,22 @@ const selections = [
   {
     name: "Signature Wool",
     description: "Heritage fibers. Timeless density.",
-    image: "https://images.unsplash.com/photo-1648115315559-620fb2f655aa?w=800&q=80",
+    image: assetPath("/images/home/premium-signature-wool.webp"),
   },
   {
     name: "Artisan Wash",
     description: "Stone-processed. Living surfaces.",
-    image: "https://images.unsplash.com/photo-1730140126190-ba6465d35e4a?w=800&q=80",
+    image: assetPath("/images/home/premium-artisan-wash.webp"),
   },
   {
     name: "Raw Cotton",
     description: "Undyed purity. Organic calm.",
-    image: "https://images.unsplash.com/photo-1661099548731-fc8f74fc9dd9?w=800&q=80",
+    image: assetPath("/images/home/premium-raw-cotton.webp"),
   },
   {
     name: "Deep Monochrome",
     description: "Single-hue mastery. Absolute depth.",
-    image: assetPath("/images/brand/over-decor.png"),
+    image: assetPath("/images/home/premium-deep-monochrome.webp"),
   },
 ];
 

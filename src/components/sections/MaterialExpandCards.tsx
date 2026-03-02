@@ -10,31 +10,28 @@ const materials = [
     origin: "New Zealand & Patagonia",
     detail:
       "Heritage flock fibers with 19-micron diameter. Superior crimp for unmatched resilience.",
-    image:
-      "https://images.unsplash.com/photo-1716808154267-98c9b7f939e4?w=800&q=80",
+    image: assetPath("/images/craftsmanship/expand-premium-wool.webp"),
   },
   {
     material: "Faux Cashmere",
     origin: "Cruelty-Free Synthetic",
     detail:
       "Ultra-soft 5mm pile replicating cashmere touch. Washable, pet-friendly, eternally soft.",
-    image:
-      "https://images.unsplash.com/photo-1730140126190-ba6465d35e4a?w=800&q=80",
+    image: assetPath("/images/craftsmanship/expand-faux-cashmere.webp"),
   },
   {
     material: "Organic Cotton",
     origin: "Egypt & India",
     detail:
       "Zero-dye philosophy. GOTS certified organic cotton from cooperative farms.",
-    image:
-      "https://images.unsplash.com/photo-1661099548731-fc8f74fc9dd9?w=800&q=80",
+    image: assetPath("/images/craftsmanship/expand-organic-cotton.webp"),
   },
   {
     material: "Wool-Silk Blend",
     origin: "Premium Fusion",
     detail:
       "Lustrous sheen meets resilient structure. Silk-infused fibers shift with ambient light.",
-    image: assetPath("/images/brand/over-decor.png"),
+    image: assetPath("/images/craftsmanship/expand-wool-silk.webp"),
   },
 ];
 

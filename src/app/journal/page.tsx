@@ -19,7 +19,7 @@ export default function JournalPage() {
     <>
       {/* Hero */}
       <FullBleedSection
-        bgImage={assetPath("/images/brand/modern.png")}
+        bgImage={assetPath("/images/journal/hero.webp")}
         overlay="heavy"
         minHeight="60vh"
       >

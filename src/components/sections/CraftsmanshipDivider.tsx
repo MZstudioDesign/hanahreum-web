@@ -27,7 +27,7 @@ export default function CraftsmanshipDivider() {
         className="absolute inset-[-20%] bg-cover bg-center"
       >
         <img
-          src={assetPath("/images/brand/soft-calm.png")}
+          src={assetPath("/images/home/bw-band-divider.webp")}
           alt="Textile macro detail"
           className="w-full h-full object-cover"
         />

@@ -170,14 +170,14 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="reveal stagger-1 aspect-[3/4] overflow-hidden">
                   <img
-                    src={assetPath("/images/brand/the-home.png")}
+                    src={assetPath("/images/about/philosophy-left.webp")}
                     alt="Hanahreum brand editorial"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="reveal stagger-2 aspect-[3/4] overflow-hidden mt-16">
                   <img
-                    src={assetPath("/images/brand/modern.png")}
+                    src={assetPath("/images/about/philosophy-right.webp")}
                     alt="Modern interior design"
                     className="w-full h-full object-cover"
                   />

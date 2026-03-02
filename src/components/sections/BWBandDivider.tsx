@@ -11,7 +11,7 @@ export default function BWBandDivider() {
       {/* Top: B&W image section */}
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <img
-          src={assetPath("/images/brand/soft-calm.png")}
+          src={assetPath("/images/home/bw-band-divider.webp")}
           alt="Hanahreum textile detail"
           className="w-full h-full object-cover grayscale"
         />

@@ -25,7 +25,7 @@ export default function BrandEssence() {
           <div className="lg:col-span-7 overflow-hidden">
             <motion.div style={{ y: imgY }} className="relative aspect-[4/5]">
               <img
-                src={assetPath("/images/brand/the-home.png")}
+                src={assetPath("/images/home/brand-essence-large.webp")}
                 alt="The Home — Hanahreum editorial"
                 className="w-full h-full object-cover"
               />
@@ -62,14 +62,14 @@ export default function BrandEssence() {
             <div className="grid grid-cols-2 gap-4">
               <div className="reveal stagger-1 aspect-[3/4] overflow-hidden translate-y-8">
                 <img
-                  src={assetPath("/images/brand/neutrality.png")}
+                  src={assetPath("/images/home/brand-essence-small-top.webp")}
                   alt="Neutrality"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
               </div>
               <div className="reveal stagger-2 aspect-[3/4] overflow-hidden -translate-y-4">
                 <img
-                  src={assetPath("/images/brand/organic.png")}
+                  src={assetPath("/images/home/brand-essence-small-bottom.webp")}
                   alt="Organic"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />

@@ -38,7 +38,7 @@ export default function ContactCTA() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${assetPath("/images/brand/cozy-warm.png")})` }}
+        style={{ backgroundImage: `url(${assetPath("/images/home/contact-cta.webp")})` }}
       />
       <div className="absolute inset-0 bg-black/80" />
 

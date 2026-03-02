@@ -21,7 +21,7 @@ export default function CollectionsPage() {
       <section className="relative min-h-[80vh] bg-[var(--color-bg-primary)] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={assetPath("/images/products/listing-1.png")}
+            src={assetPath("/images/collections/sw-001.webp")}
             alt="Hanahreum rug collection"
             className="w-full h-full object-cover opacity-30"
           />
@@ -193,7 +193,7 @@ export default function CollectionsPage() {
 
       {/* Bottom CTA */}
       <FullBleedSection
-        bgImage={assetPath("/images/brand/a-style.png")}
+        bgImage={assetPath("/images/collections/dm-001.webp")}
         overlay="heavy"
         minHeight="50vh"
       >

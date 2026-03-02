@@ -15,27 +15,27 @@ const menuItems: FlowingMenuItem[] = [
   {
     link: "/collections/",
     text: "Collections",
-    image: assetPath("/images/brand/the-home.png"),
+    image: assetPath("/images/home/flowing-menu-collections.webp"),
   },
   {
     link: "/craftsmanship/",
     text: "Craftsmanship",
-    image: assetPath("/images/brand/organic.png"),
+    image: assetPath("/images/home/flowing-menu-craftsmanship.webp"),
   },
   {
     link: "/about/",
     text: "About Us",
-    image: assetPath("/images/brand/modern.png"),
+    image: assetPath("/images/home/flowing-menu-about.webp"),
   },
   {
     link: "/journal/",
     text: "Journal",
-    image: assetPath("/images/brand/soft-calm.png"),
+    image: assetPath("/images/home/flowing-menu-journal.webp"),
   },
   {
     link: "/#contact",
     text: "Partner With Us",
-    image: assetPath("/images/brand/cozy-warm.png"),
+    image: assetPath("/images/home/flowing-menu-partner.webp"),
   },
 ];
 
