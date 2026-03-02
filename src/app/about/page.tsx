@@ -2,20 +2,31 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Factory,
+  Palette,
+  PackageCheck,
+  Scale,
+  PenTool,
+  Handshake,
+  Globe,
+  BadgeCheck,
+} from "lucide-react";
 import { timelineEvents } from "@/data/collections";
 import FullBleedSection from "@/components/ui/FullBleedSection";
 import { Timeline } from "@/components/ui/Timeline";
+import StarBorder from "@/components/ui/StarBorder";
 import { assetPath } from "@/lib/paths";
 
 const partners = [
-  "6 Factory Partners",
-  "3 Design Partners",
-  "FBABEE",
-  "Global Legal & Compliance",
-  "MZS Design Studio",
-  "IJM International",
-  "Global Markets (US, AU, CA, UAE)",
-  "Official Brand (US, KR)",
+  { label: "6 Factory Partners", icon: Factory },
+  { label: "3 Design Partners", icon: Palette },
+  { label: "FBABEE", icon: PackageCheck },
+  { label: "Global Legal & Compliance", icon: Scale },
+  { label: "MZS Design Studio", icon: PenTool },
+  { label: "IJM International", icon: Handshake },
+  { label: "Global Markets (US, AU, CA, UAE)", icon: Globe },
+  { label: "Official Brand (US, KR)", icon: BadgeCheck },
 ];
 
 const teamMembers = [
@@ -211,7 +222,7 @@ export default function AboutPage() {
                         : "lg:col-span-7"
                     }`}
                   >
-                    <div className="aspect-[3/4] overflow-hidden bg-[var(--color-bg-elevated)]">
+                    <div className="aspect-[4/3] overflow-hidden bg-[var(--color-bg-elevated)]">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -280,20 +291,31 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--color-border)]">
-            {partners.map((partner, i) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: i * 0.08, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-[var(--color-bg-secondary)] p-8 md:p-12 flex items-center justify-center text-center group hover:bg-[var(--color-bg-elevated)] transition-colors duration-500"
-              >
-                <span className="text-sm tracking-[0.15em] uppercase text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors duration-500">
-                  {partner}
-                </span>
-              </motion.div>
-            ))}
+            {partners.map((partner, i) => {
+              const Icon = partner.icon;
+              return (
+                <motion.div
+                  key={partner.label}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: i * 0.08, duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <StarBorder className="group w-full h-full bg-[var(--color-bg-secondary)] hover:bg-[var(--color-bg-elevated)] transition-colors duration-500">
+                    <div className="flex flex-col items-center justify-center text-center p-8 md:p-12 gap-4">
+                      <Icon
+                        size={22}
+                        strokeWidth={1.2}
+                        className="text-[var(--color-accent-dark)] group-hover:text-[var(--color-accent)] transition-colors duration-500"
+                      />
+                      <span className="text-sm tracking-[0.15em] uppercase text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors duration-500">
+                        {partner.label}
+                      </span>
+                    </div>
+                  </StarBorder>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Stats */}

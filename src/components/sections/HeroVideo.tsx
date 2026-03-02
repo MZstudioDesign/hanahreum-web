@@ -111,7 +111,7 @@ export default function HeroVideo() {
           initial={{ opacity: 0, y: 30 }}
           animate={loaded ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.4, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-xl md:text-3xl italic text-[var(--color-text-secondary)] max-w-2xl mb-4"
+          className="font-display text-xl md:text-3xl italic text-[var(--color-text-primary)] max-w-2xl mb-4"
         >
           Timeless Beauty, Crafted for Spaces.
         </motion.p>
@@ -121,7 +121,7 @@ export default function HeroVideo() {
           initial={{ opacity: 0 }}
           animate={loaded ? { opacity: 1 } : {}}
           transition={{ delay: 2.0, duration: 1.5 }}
-          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-primary)] mt-4"
+          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-muted)] mt-4"
         >
           The Essence of Textile
         </motion.p>
