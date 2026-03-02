@@ -246,7 +246,7 @@ export const products: Product[] = [
     description: "Coffee-dark fibers with matte finish. Rich, grounding presence for any interior.",
     dimensions: "8' × 10'",
     material: "Premium Wool",
-    image: assetPath("/images/collections/dm-005.webp"),
+    image: assetPath("/images/collections/dm-006.webp"),
     price: "$219",
   },
 ];
@@ -303,7 +303,7 @@ export const journalArticles = [
     category: "Process",
     date: "2024.04",
     readTime: "7 min",
-    image: assetPath("/images/journal/featured-article.webp"),
+    image: assetPath("/images/journal/article-thickness.webp"),
     excerpt: "Setting the right thickness is not arbitrary. Too thin and the rug lacks presence; too thick and it catches under doors, trips feet, and resists lying flat. We explain why 8mm became our standard, and why achieving exact color reproduction remains our most demanding technical challenge.",
     body: "Every rug begins with a decision about thickness — and that decision affects everything downstream.\n\nWe tested pile heights from 3mm to 15mm before settling on 8mm as our standard for faux cashmere rugs. At 3–5mm, the rug felt more like a mat than a textile. At 12–15mm, it was luxuriously plush but impractical — robot vacuums couldn't traverse it, furniture legs sank in, and it trapped debris deep in the pile.\n\n8mm represents the intersection of comfort and function. It's thick enough to feel substantial underfoot, thin enough to slide under doors, and compatible with all major robot vacuum brands. For our wool lines, we use 10–12mm because the denser fiber structure provides support even at greater heights.\n\nColor reproduction presents a different kind of challenge. Our design team creates digital color specifications using Pantone references, but translating a screen color to a physical fiber is never one-to-one. The same dye formula produces different results depending on fiber composition, ambient humidity during dyeing, and batch variations in raw material.\n\nTo achieve consistency, we run test dye batches before every production run and compare them against physical color swatches (not digital references) under standardized D65 lighting. If the delta-E value exceeds 1.5, the batch is re-dyed. This is expensive and time-consuming, but it's why a Hanahreum rug matches its product photo.\n\nThe challenge intensifies with dark colors. Achieving a true, deep black — without it reading as dark gray or dark brown — requires multiple dye immersions with precise temperature control. Our midnight black colorway undergoes 8–10 dye cycles, each adding density without shifting the hue.",
   },

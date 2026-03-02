@@ -21,11 +21,11 @@ export default function CollectionsPage() {
       <section className="relative min-h-[80vh] bg-[var(--color-bg-primary)] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={assetPath("/images/collections/sw-001.webp")}
+            src={assetPath("/images/collections/collections-hero-bg.webp")}
             alt="Hanahreum rug collection"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-transparent to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pb-16 md:pb-24 w-full">
@@ -88,7 +88,7 @@ export default function CollectionsPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true }}
-                  className="font-display text-5xl md:text-7xl lg:text-[100px] leading-[0.95] tracking-tight text-[var(--color-text-primary)]/10 mb-12"
+                  className="font-display text-5xl md:text-7xl lg:text-[100px] leading-[0.95] tracking-tight text-[var(--color-text-primary)]/20 mb-12"
                 >
                   Signature
                   <br />
@@ -194,7 +194,7 @@ export default function CollectionsPage() {
 
       {/* Bottom CTA */}
       <FullBleedSection
-        bgImage={assetPath("/images/collections/dm-001.webp")}
+        bgImage={assetPath("/images/collections/collections-cta-bg.webp")}
         overlay="heavy"
         minHeight="50vh"
       >
