@@ -27,7 +27,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Premium Wool",
     image: assetPath("/images/collections/sw-001.webp"),
-    price: "$2,480",
+    price: "$189",
   },
   {
     id: "sw-002",
@@ -37,7 +37,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Premium Wool",
     image: assetPath("/images/collections/sw-002.webp"),
-    price: "$1,890",
+    price: "$149",
   },
   {
     id: "sw-003",
@@ -47,7 +47,7 @@ export const products: Product[] = [
     dimensions: "9' × 12'",
     material: "Merino Wool Blend",
     image: assetPath("/images/collections/sw-003.webp"),
-    price: "$3,240",
+    price: "$249",
   },
   {
     id: "aw-001",
@@ -57,7 +57,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Faux Cashmere",
     image: assetPath("/images/collections/aw-001.webp"),
-    price: "$1,650",
+    price: "$119",
   },
   {
     id: "aw-002",
@@ -67,7 +67,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Faux Cashmere",
     image: assetPath("/images/collections/aw-002.webp"),
-    price: "$2,120",
+    price: "$159",
   },
   {
     id: "aw-003",
@@ -77,7 +77,7 @@ export const products: Product[] = [
     dimensions: "5' × 7'",
     material: "Cotton Blend",
     image: assetPath("/images/collections/aw-003.webp"),
-    price: "$1,380",
+    price: "$89",
   },
   {
     id: "aw-004",
@@ -87,7 +87,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Faux Cashmere",
     image: assetPath("/images/collections/aw-004.webp"),
-    price: "$1,720",
+    price: "$129",
   },
   {
     id: "rc-001",
@@ -97,7 +97,7 @@ export const products: Product[] = [
     dimensions: "4' × 6'",
     material: "Organic Cotton",
     image: assetPath("/images/collections/rc-001.webp"),
-    price: "$980",
+    price: "$59",
   },
   {
     id: "rc-002",
@@ -107,7 +107,7 @@ export const products: Product[] = [
     dimensions: "5' × 7'",
     material: "Cotton-Linen",
     image: assetPath("/images/collections/rc-002.webp"),
-    price: "$1,150",
+    price: "$79",
   },
   {
     id: "rc-003",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Egyptian Cotton",
     image: assetPath("/images/collections/rc-003.webp"),
-    price: "$1,540",
+    price: "$109",
   },
   {
     id: "rc-004",
@@ -127,7 +127,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Organic Cotton",
     image: assetPath("/images/collections/rc-004.webp"),
-    price: "$1,880",
+    price: "$139",
   },
   {
     id: "dm-001",
@@ -137,7 +137,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Wool-Silk Blend",
     image: assetPath("/images/collections/dm-001.webp"),
-    price: "$2,750",
+    price: "$199",
   },
   {
     id: "dm-002",
@@ -147,7 +147,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Premium Wool",
     image: assetPath("/images/collections/dm-002.webp"),
-    price: "$3,100",
+    price: "$239",
   },
   {
     id: "dm-003",
@@ -157,7 +157,7 @@ export const products: Product[] = [
     dimensions: "9' × 12'",
     material: "Wool-Cashmere",
     image: assetPath("/images/collections/dm-003.webp"),
-    price: "$3,620",
+    price: "$300",
   },
   {
     id: "dm-004",
@@ -167,7 +167,7 @@ export const products: Product[] = [
     dimensions: "5' × 7'",
     material: "Wool Blend",
     image: assetPath("/images/collections/dm-004.webp"),
-    price: "$1,950",
+    price: "$149",
   },
   {
     id: "sw-004",
@@ -177,7 +177,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Premium Wool",
     image: assetPath("/images/collections/sw-004.webp"),
-    price: "$2,180",
+    price: "$159",
   },
   {
     id: "aw-005",
@@ -187,7 +187,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Cotton-Wool",
     image: assetPath("/images/collections/aw-005.webp"),
-    price: "$2,340",
+    price: "$179",
   },
   {
     id: "rc-005",
@@ -197,7 +197,7 @@ export const products: Product[] = [
     dimensions: "9' × 12'",
     material: "Organic Cotton",
     image: assetPath("/images/collections/rc-005.webp"),
-    price: "$2,050",
+    price: "$159",
   },
   {
     id: "dm-005",
@@ -207,7 +207,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Wool-Silk",
     image: assetPath("/images/collections/dm-005.webp"),
-    price: "$3,850",
+    price: "$300",
   },
   {
     id: "sw-005",
@@ -217,7 +217,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "New Zealand Wool",
     image: assetPath("/images/collections/sw-005.webp"),
-    price: "$2,680",
+    price: "$199",
   },
   {
     id: "aw-006",
@@ -227,7 +227,7 @@ export const products: Product[] = [
     dimensions: "5' × 7'",
     material: "Faux Cashmere",
     image: assetPath("/images/collections/aw-006.webp"),
-    price: "$1,480",
+    price: "$99",
   },
   {
     id: "rc-006",
@@ -237,7 +237,7 @@ export const products: Product[] = [
     dimensions: "6' × 9'",
     material: "Organic Cotton",
     image: assetPath("/images/collections/rc-006.webp"),
-    price: "$1,350",
+    price: "$99",
   },
   {
     id: "dm-006",
@@ -247,7 +247,7 @@ export const products: Product[] = [
     dimensions: "8' × 10'",
     material: "Premium Wool",
     image: assetPath("/images/collections/dm-005.webp"),
-    price: "$2,890",
+    price: "$219",
   },
 ];
 

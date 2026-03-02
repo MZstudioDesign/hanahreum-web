@@ -13,7 +13,7 @@ export default function BWBandDivider() {
         <img
           src={assetPath("/images/home/bw-band-divider.webp")}
           alt="Hanahreum textile detail"
-          className="w-full h-full object-cover grayscale"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">

@@ -84,8 +84,8 @@ export default function AboutPage() {
       <section ref={heroRef} className="relative w-full h-screen overflow-hidden">
         <motion.div style={{ scale: heroScale }} className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80"
-            alt="Warm interior space with natural light and rug"
+            src={assetPath("/images/about/hero.webp")}
+            alt="Textile archive corridor with warm golden light"
             className="w-full h-full object-cover"
           />
         </motion.div>
