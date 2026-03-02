@@ -15,7 +15,6 @@ import {
 import { timelineEvents } from "@/data/collections";
 import FullBleedSection from "@/components/ui/FullBleedSection";
 import { Timeline } from "@/components/ui/Timeline";
-import StarBorder from "@/components/ui/StarBorder";
 import { assetPath } from "@/lib/paths";
 
 const partners = [
@@ -25,7 +24,7 @@ const partners = [
   { label: "Global Legal & Compliance", icon: Scale },
   { label: "MZS Design Studio", icon: PenTool },
   { label: "IJM International", icon: Handshake },
-  { label: "Global Markets (US, AU, CA, UAE)", icon: Globe },
+  { label: "Global Markets", sub: "(US, AU, CA, UAE)", icon: Globe },
   { label: "Official Brand (US, KR)", icon: BadgeCheck },
 ];
 
@@ -218,11 +217,11 @@ export default function AboutPage() {
                     viewport={{ once: true }}
                     className={`group ${
                       isReversed
-                        ? "lg:col-span-7 lg:col-start-6 lg:row-start-1"
-                        : "lg:col-span-7"
+                        ? "lg:col-span-4 lg:col-start-9 lg:row-start-1"
+                        : "lg:col-span-5"
                     }`}
                   >
-                    <div className="aspect-[4/3] overflow-hidden bg-[var(--color-bg-elevated)]">
+                    <div className="aspect-[3/4] max-h-[500px] overflow-hidden bg-[var(--color-bg-elevated)]">
                       <img
                         src={member.image}
                         alt={member.name}
@@ -242,8 +241,8 @@ export default function AboutPage() {
                     viewport={{ once: true }}
                     className={`${
                       isReversed
-                        ? "lg:col-span-5 lg:col-start-1 lg:row-start-1"
-                        : "lg:col-span-5"
+                        ? "lg:col-span-7 lg:col-start-1 lg:row-start-1"
+                        : "lg:col-span-7"
                     }`}
                   >
                     <h3 className="font-display text-3xl md:text-4xl text-[var(--color-text-primary)] mb-2">
@@ -300,19 +299,19 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: i * 0.08, duration: 0.6 }}
                   viewport={{ once: true }}
+                  className="bg-[var(--color-bg-secondary)] p-8 md:p-12 flex flex-col items-center justify-center text-center gap-4 group hover:bg-[var(--color-bg-elevated)] transition-colors duration-500"
                 >
-                  <StarBorder className="group w-full h-full bg-[var(--color-bg-secondary)] hover:bg-[var(--color-bg-elevated)] transition-colors duration-500">
-                    <div className="flex flex-col items-center justify-center text-center p-8 md:p-12 gap-4">
-                      <Icon
-                        size={22}
-                        strokeWidth={1.2}
-                        className="text-[var(--color-accent-dark)] group-hover:text-[var(--color-accent)] transition-colors duration-500"
-                      />
-                      <span className="text-sm tracking-[0.15em] uppercase text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors duration-500">
-                        {partner.label}
-                      </span>
-                    </div>
-                  </StarBorder>
+                  <Icon
+                    size={22}
+                    strokeWidth={1.2}
+                    className="text-[var(--color-accent-dark)] group-hover:text-[var(--color-accent)] transition-colors duration-500"
+                  />
+                  <span className="text-sm tracking-[0.15em] uppercase text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors duration-500 flex flex-col items-center gap-0.5">
+                    <span>{partner.label}</span>
+                    {"sub" in partner && partner.sub && (
+                      <span>{partner.sub}</span>
+                    )}
+                  </span>
                 </motion.div>
               );
             })}

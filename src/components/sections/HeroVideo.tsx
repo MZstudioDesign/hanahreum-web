@@ -121,7 +121,7 @@ export default function HeroVideo() {
           initial={{ opacity: 0 }}
           animate={loaded ? { opacity: 1 } : {}}
           transition={{ delay: 2.0, duration: 1.5 }}
-          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-muted)] mt-4"
+          className="text-sm tracking-[0.3em] uppercase text-[var(--color-text-secondary)] mt-4"
         >
           The Essence of Textile
         </motion.p>
