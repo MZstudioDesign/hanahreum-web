@@ -59,6 +59,7 @@ export default function JournalPage() {
                 <img
                   src={featured.image}
                   alt={featured.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                 />
               </div>
@@ -128,6 +129,7 @@ export default function JournalPage() {
                     <img
                       src={article.image}
                       alt={article.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

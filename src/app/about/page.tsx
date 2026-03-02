@@ -33,13 +33,13 @@ const teamMembers = [
     name: "Yecheon Yie",
     role: "Founder & Owner",
     bio: "Founded in 2019 through product development, the brand officially launched its first product in 2020. What began with creating products soon expanded into marketing, business strategy, operational systems, and capital management — each carefully studied, tested, and applied firsthand. Growth was never accidental, but the result of deliberate decisions and continuous refinement.",
-    image: assetPath("/images/team/yecheon.png"),
+    image: assetPath("/images/team/yecheon.webp"),
   },
   {
     name: "Yutaek Oh",
     role: "Design & Marketing Lead",
     bio: "Yutaek joined the team in 2024, leading design and marketing while overseeing the technical structure behind the brand. He shapes the visual direction, refines communication strategy, and strengthens the internal systems that support execution. His role bridges creativity and structure — ensuring the brand is not only seen, but built to last.",
-    image: assetPath("/images/team/yutaek.png"),
+    image: assetPath("/images/team/yutaek.webp"),
   },
 ];
 
@@ -51,6 +51,7 @@ const timelineData = timelineEvents.map((event) => ({
         <img
           src={event.image}
           alt={event.title}
+          loading="lazy"
           className="w-full h-full object-cover"
         />
       </div>
@@ -172,6 +173,7 @@ export default function AboutPage() {
                   <img
                     src={assetPath("/images/about/philosophy-left.webp")}
                     alt="Hanahreum brand editorial"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -179,6 +181,7 @@ export default function AboutPage() {
                   <img
                     src={assetPath("/images/about/philosophy-right.webp")}
                     alt="Modern interior design"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -229,6 +232,7 @@ export default function AboutPage() {
                       <img
                         src={member.image}
                         alt={member.name}
+                        loading="lazy"
                         className={`w-full h-full object-cover object-top transition-all duration-1000 ${hovered ? "grayscale-0" : "grayscale"}`}
                         style={i === 0
                           ? { transform: `scale(${hovered ? 1.55 : 1.5}) translateX(-7px)`, transformOrigin: "top center" }

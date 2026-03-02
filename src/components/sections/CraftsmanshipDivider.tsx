@@ -29,6 +29,7 @@ export default function CraftsmanshipDivider() {
         <img
           src={assetPath("/images/home/bw-band-divider.webp")}
           alt="Textile macro detail"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
       </motion.div>

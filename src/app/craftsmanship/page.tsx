@@ -98,6 +98,7 @@ function ProcessBlock({
           <img
             src={image}
             alt={title}
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </motion.div>

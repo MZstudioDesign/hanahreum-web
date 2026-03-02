@@ -27,6 +27,7 @@ export default function BrandEssence() {
               <img
                 src={assetPath("/images/home/brand-essence-large.webp")}
                 alt="The Home — Hanahreum editorial"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[var(--color-bg-primary)] to-transparent" />
@@ -64,6 +65,7 @@ export default function BrandEssence() {
                 <img
                   src={assetPath("/images/home/brand-essence-small-top.webp")}
                   alt="Neutrality"
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
               </div>
@@ -71,6 +73,7 @@ export default function BrandEssence() {
                 <img
                   src={assetPath("/images/home/brand-essence-small-bottom.webp")}
                   alt="Organic"
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
               </div>

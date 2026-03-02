@@ -57,7 +57,8 @@ export default function HeroVideo() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster={assetPath("/images/home/hero-poster.webp")}
           className="w-full h-full object-cover"
           onCanPlay={() => setLoaded(true)}
         >

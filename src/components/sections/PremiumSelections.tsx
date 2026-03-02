@@ -70,6 +70,7 @@ export default function PremiumSelections() {
                 <img
                   src={item.image}
                   alt={item.name}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                 />
                 {/* Spotlight hover effect */}
