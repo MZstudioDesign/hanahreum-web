@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Factory,
@@ -33,13 +33,13 @@ const teamMembers = [
     name: "Yecheon Yie",
     role: "Founder & Owner",
     bio: "Founded in 2019 through product development, the brand officially launched its first product in 2020. What began with creating products soon expanded into marketing, business strategy, operational systems, and capital management — each carefully studied, tested, and applied firsthand. Growth was never accidental, but the result of deliberate decisions and continuous refinement.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&auto=format&fit=crop&q=80",
+    image: assetPath("/images/team/yecheon.png"),
   },
   {
     name: "Yutaek Oh",
     role: "Design & Marketing Lead",
     bio: "Yutaek joined the team in 2024, leading design and marketing while overseeing the technical structure behind the brand. He shapes the visual direction, refines communication strategy, and strengthens the internal systems that support execution. His role bridges creativity and structure — ensuring the brand is not only seen, but built to last.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80",
+    image: assetPath("/images/team/yutaek.png"),
   },
 ];
 
@@ -70,6 +70,7 @@ const timelineData = timelineEvents.map((event) => ({
 }));
 
 export default function AboutPage() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -202,6 +203,7 @@ export default function AboutPage() {
           <div className="space-y-24 md:space-y-32">
             {teamMembers.map((member, i) => {
               const isReversed = i % 2 !== 0;
+              const hovered = hoveredIndex === i;
               return (
                 <div
                   key={member.name}
@@ -220,12 +222,18 @@ export default function AboutPage() {
                         ? "lg:col-span-4 lg:col-start-9 lg:row-start-1"
                         : "lg:col-span-5"
                     }`}
+                    onMouseEnter={() => setHoveredIndex(i)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                   >
                     <div className="aspect-[3/4] max-h-[500px] overflow-hidden bg-[var(--color-bg-elevated)]">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                        className={`w-full h-full object-cover object-top transition-all duration-1000 ${hovered ? "grayscale-0" : "grayscale"}`}
+                        style={i === 0
+                          ? { transform: `scale(${hovered ? 1.55 : 1.5}) translateX(-7px)`, transformOrigin: "top center" }
+                          : { transform: `scale(${hovered ? 1.55 : 1.5})`, transformOrigin: "top center" }
+                        }
                       />
                     </div>
                   </motion.div>
