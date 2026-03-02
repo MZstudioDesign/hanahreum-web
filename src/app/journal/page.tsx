@@ -55,12 +55,12 @@ export default function JournalPage() {
             onClick={() => setSelectedArticle(featured)}
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
-              <div className="lg:col-span-8 overflow-hidden aspect-[16/9] lg:aspect-auto lg:h-[70vh]">
+              <div className="lg:col-span-8 relative overflow-hidden aspect-[16/9] lg:aspect-auto">
                 <img
                   src={featured.image}
                   alt={featured.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+                  className="w-full h-full lg:absolute lg:inset-0 object-cover transition-transform duration-[2s] group-hover:scale-105"
                 />
               </div>
               <div className="lg:col-span-4 bg-[var(--color-bg-secondary)] p-8 md:p-12 flex flex-col justify-between">
