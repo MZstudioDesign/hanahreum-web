@@ -172,7 +172,7 @@ export default function AboutPage() {
                 <div className="reveal stagger-1 aspect-[3/4] overflow-hidden">
                   <img
                     src={assetPath("/images/about/philosophy-left.webp")}
-                    alt="Hanahreum brand editorial"
+                    alt="Hanahreum editorial photography showing brand identity and premium textile craftsmanship"
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 <div className="reveal stagger-2 aspect-[3/4] overflow-hidden mt-16">
                   <img
                     src={assetPath("/images/about/philosophy-right.webp")}
-                    alt="Modern interior design"
+                    alt="Contemporary interior space styled with Hanahreum rugs and minimalist decor"
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -231,7 +231,7 @@ export default function AboutPage() {
                     <div className="aspect-[3/4] max-h-[500px] overflow-hidden bg-[var(--color-bg-elevated)]">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={`${member.name}, ${member.role} at Hanahreum — professional portrait`}
                         loading="lazy"
                         className={`w-full h-full object-cover object-top transition-all duration-1000 ${hovered ? "grayscale-0" : "grayscale"}`}
                         style={i === 0

@@ -12,7 +12,7 @@ export default function BWBandDivider() {
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <img
           src={assetPath("/images/home/bw-band-divider.webp")}
-          alt="Hanahreum textile detail"
+          alt="Close-up of Hanahreum rug weave texture in black and white showing thread precision"
           loading="lazy"
           className="w-full h-full object-cover"
         />

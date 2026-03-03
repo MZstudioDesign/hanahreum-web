@@ -66,7 +66,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+        <nav aria-label="Main navigation" className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-20">
           <Link href="/" className="relative z-50 group">
             <motion.span
               className="font-logo text-2xl md:text-3xl text-[var(--color-text-primary)] tracking-[-0.03em] inline-block"
@@ -97,7 +97,8 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="md:hidden relative z-50 p-2 text-[var(--color-text-primary)]"
-            aria-label="Toggle menu"
+            aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileOpen}
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

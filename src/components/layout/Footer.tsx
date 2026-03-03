@@ -22,7 +22,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[var(--color-bg-primary)] border-t border-[var(--color-border)]">
+    <footer role="contentinfo" aria-label="Site footer" className="relative bg-[var(--color-bg-primary)] border-t border-[var(--color-border)]">
       {/* Animated divider line */}
       <motion.div
         initial={{ scaleX: 0 }}

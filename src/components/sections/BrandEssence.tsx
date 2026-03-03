@@ -26,7 +26,7 @@ export default function BrandEssence() {
             <motion.div style={{ y: imgY }} className="relative aspect-[4/5]">
               <img
                 src={assetPath("/images/home/brand-essence-large.webp")}
-                alt="The Home — Hanahreum editorial"
+                alt="Hanahreum handcrafted rug displayed in a warm minimalist living room with natural light"
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
@@ -64,7 +64,7 @@ export default function BrandEssence() {
               <div className="reveal stagger-1 aspect-[3/4] overflow-hidden translate-y-8">
                 <img
                   src={assetPath("/images/home/brand-essence-small-top.webp")}
-                  alt="Neutrality"
+                  alt="Neutral-toned textile close-up showcasing Hanahreum's muted earth color palette"
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
@@ -72,7 +72,7 @@ export default function BrandEssence() {
               <div className="reveal stagger-2 aspect-[3/4] overflow-hidden -translate-y-4">
                 <img
                   src={assetPath("/images/home/brand-essence-small-bottom.webp")}
-                  alt="Organic"
+                  alt="Organic cotton rug texture detail with natural undyed fibers and soft weave pattern"
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />

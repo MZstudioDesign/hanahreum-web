@@ -22,7 +22,7 @@ export default function CollectionsPage() {
         <div className="absolute inset-0">
           <img
             src={assetPath("/images/collections/collections-hero-bg.webp")}
-            alt="Hanahreum rug collection"
+            alt="Overhead view of Hanahreum premium rug collection displayed in editorial arrangement"
             className="w-full h-full object-cover opacity-50"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-transparent to-transparent" />
@@ -133,7 +133,7 @@ export default function CollectionsPage() {
                     >
                       <img
                         src={product.image}
-                        alt={product.name}
+                        alt={`${product.name} — ${product.collection} collection, ${product.material} rug by Hanahreum`}
                         loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                       />

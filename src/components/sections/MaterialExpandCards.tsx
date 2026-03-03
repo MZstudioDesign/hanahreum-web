@@ -68,7 +68,7 @@ export default function MaterialExpandCards() {
             >
               <img
                 src={mat.image}
-                alt={mat.material}
+                alt={`${mat.material} textile close-up sourced from ${mat.origin}`}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />

@@ -69,7 +69,7 @@ export default function PremiumSelections() {
               <div className="relative aspect-[3/4] overflow-hidden bg-[var(--color-bg-elevated)]">
                 <img
                   src={item.image}
-                  alt={item.name}
+                  alt={`${item.name} collection rug — ${item.description.toLowerCase()}`}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                 />

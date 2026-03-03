@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://rug.hanahreum.asia/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rug.hanahreum.asia/images/home/brand-essence-large.webp</image:loc>
+      <image:title>Hanahreum handcrafted rug in minimalist living room</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rug.hanahreum.asia/about/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rug.hanahreum.asia/images/about/hero.webp</image:loc>
+      <image:title>Hanahreum brand story and textile archive</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rug.hanahreum.asia/craftsmanship/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rug.hanahreum.asia/images/craftsmanship/hero.webp</image:loc>
+      <image:title>Hanahreum textile workshop and craftsmanship process</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rug.hanahreum.asia/collections/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rug.hanahreum.asia/images/collections/collections-hero-bg.webp</image:loc>
+      <image:title>Hanahreum premium rug collection gallery</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rug.hanahreum.asia/journal/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://rug.hanahreum.asia/images/journal/hero.webp</image:loc>
+      <image:title>Hanahreum journal insights and textile research</image:title>
+    </image:image>
+  </url>
+</urlset>

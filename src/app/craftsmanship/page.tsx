@@ -97,7 +97,7 @@ function ProcessBlock({
         <motion.div style={{ scale: imgScale }} className="aspect-[16/10]">
           <img
             src={image}
-            alt={title}
+            alt={`${title} material sample showing natural fiber texture and weave detail`}
             loading="lazy"
             className="w-full h-full object-cover"
           />
