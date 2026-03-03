@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Black_Han_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScroll from "@/components/ui/SmoothScroll";
+
+const GA_ID = "G-MC3D4YPDVC";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -122,6 +125,16 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${blackHanSans.variable}`}
     >
       <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
