@@ -145,6 +145,12 @@ export default function Footer() {
             rights reserved.
           </p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
+            <Link
+              href="/privacy/"
+              className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] tracking-wider transition-colors duration-300"
+            >
+              Privacy Policy
+            </Link>
             <span className="text-xs text-[var(--color-text-muted)] tracking-wider">
               Searching The Essence.
             </span>
